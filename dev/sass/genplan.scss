@@ -1,0 +1,14 @@
+path.build-item {
+    fill: #82ff00;
+    fill-opacity: 0;
+    stroke: #0f0;
+    stroke-opacity: 0;
+    stroke-width: 4px;
+    transition: .3s;
+    cursor: pointer;
+
+    &:hover {
+        fill-opacity: 0.3;
+        stroke-opacity: 1;
+    }
+}
