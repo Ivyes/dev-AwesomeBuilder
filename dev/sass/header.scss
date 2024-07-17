@@ -1,8 +1,37 @@
-header{
-	height: 7vh;
-	padding: 15px 0;
-	background: #222;
-	a {
-		color: #fff;
+header {
+	padding: 20px 0;
+	color: #A9A5A5;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		display: inline-block;
+		max-width: 180px;
+		width: 100%;
+	}
+
+	nav {
+		padding-right: 100px;
+	}
+
+	.menu {
+		list-style: none;
+		display: flex;
+		gap: 30px;
+
+		.menu-link {
+			text-decoration: none;
+			color: #A9A5A5;
+			text-transform: capitalize;
+			transition: .3s;
+
+			&:hover {
+				color: #57d7ee;
+			}
+		}
 	}
 }
