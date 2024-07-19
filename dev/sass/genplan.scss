@@ -1,4 +1,5 @@
-path.build-item {
+path.build-item,
+path.build-float {
     fill: #57d7ee;
     fill-opacity: 0;
     stroke: #4398a7;
@@ -10,5 +11,41 @@ path.build-item {
     &:hover {
         fill-opacity: 0.3;
         stroke-opacity: 1;
+    }
+
+    &.sold {
+        fill: #e93111;
+        fill-opacity: 0.3;
+        stroke: #e93111;
+        stroke-opacity: 1;
+        cursor: no-drop;
+    }
+}
+
+// info section
+
+.info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .info-build {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 30px;
+
+        .info-item {
+            text-align: center;
+
+            i {
+                display: block;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
     }
 }
