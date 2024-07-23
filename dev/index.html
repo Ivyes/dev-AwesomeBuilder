@@ -2,27 +2,7 @@
 @@include('templates/header.html')
 <main class="wrapper home">
     @@include('templates/genplan.html')
-    <section class="info">
-        <div class="container">
-            <h2>Інформація про будинок</h2>
-            <ul class="info-build">
-                <li class="info-item">
-                    Адреса: <i>вул. <span id="address">Юності 91</span></i>
-                </li>
-                <li class="info-item">
-                    Загальна кількість квартир: <i id="flats">50</i>
-                </li>
-                <li class="info-item">
-                    Вільних квартир: <i id="flats-free">25</i>
-                </li>
-                <li class="info-item">
-                    Забраньовані квартири: <i id="flats-booking">11</i>
-                </li>
-                <li class="info-item">
-                    Продані квартири: <i id="flats-sold">14</i>
-                </li>
-            </ul>
-        </div>
-    </section>
+    @@include('templates/build-info.html')
+    @@include('templates/modal.html')
 </main>
 @@include('templates/footer.html')

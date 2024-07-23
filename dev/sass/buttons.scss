@@ -1,0 +1,27 @@
+.btn {
+    display: inline-block;
+    padding: 10px 15px 12px;
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    background-color: #000000;
+    color: #A9A5A5;
+    font-size: 16px;
+    font-family: monospace;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        background-color: #57d7ee;
+        color: #000;
+    }
+
+}
+
+.closed {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+}
