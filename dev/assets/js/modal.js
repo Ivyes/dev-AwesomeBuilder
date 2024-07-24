@@ -1,6 +1,19 @@
-const modal = document.querySelector('.modal-wrapper');
-const buildSold = document.querySelector('.build-item');
-const closeBtn = document.querySelector('.closed')
+const modal = document.querySelector('.modal-wrapper')
+const btnClose = document.querySelectorAll('.closed')
+const buildSold = document.querySelectorAll('.sold')
 
-buildSold.addEventListener('click', () => modal.classList.add('show'))
-closeBtn.addEventListener('click', () => modal.classList.remove('show'))
+const showModal = () => {
+    modal.classList.add('show')
+}
+
+const closeModal = () => {
+    modal.classList.remove('show')
+}
+
+buildSold.forEach(buildItem => {
+    buildItem.addEventListener('click', showModal)
+})
+
+btnClose.forEach( closeItem => {
+    closeItem.addEventListener('click', closeModal)
+})
