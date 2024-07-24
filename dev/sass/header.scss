@@ -14,7 +14,9 @@ header {
 	}
 
 	nav {
-		padding-right: 100px;
+		display: flex;
+		gap: 100px;
+		align-items: center;
 	}
 
 	.menu {

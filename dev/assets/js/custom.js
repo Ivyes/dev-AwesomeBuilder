@@ -16,6 +16,7 @@ const calcInformation = () => buildItem.forEach(item => {
 
     if (flatsFree === 0) {
         item.classList.add('sold');
+        item.setAttribute('data-triger-modal', "sold");
         item.addEventListener('click', (event) => {
             event.preventDefault();
         })
