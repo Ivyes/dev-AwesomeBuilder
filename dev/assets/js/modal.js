@@ -9,30 +9,59 @@ const modalArr = [{
     triger: 'sold',
     title: 'Нажаль всі квартири продані..(',
     description: 'Вільні квартири знаходяться в будинках, які не продані. Оберіть, будь ласка, іншу будівлю, щоб переглянути квартири своєї мрії!)',
+    urlImg: 'assets/img/application-rejected.png',
 },
 {
     id: 1,
     triger: 'registrationSuccess',
-    title: 'Успішна реєстрація',
+    title: 'Регістрація',
     description: 'Ви успішно зареєструвалися.',
+    urlImg: 'assets/img/аpplication-accepted.png',
+    markap: `
+        <form>
+            <div class="input-row">
+                <label for="login">Введіть Ваш логін:</label>
+                <input type="text" id="login">
+                <label for="password">Введіть Ваш пароль:</label>
+                <input type="text" id="password">
+            </div>
+        </form>
+    `,
 },
 {
     id: 2,
     triger: 'loginSuccess',
     title: 'Успішний вхід',
     description: 'Ви успішно зареєструвалися.',
+    urlImg: 'assets/img/аpplication-accepted.png',
 },
 ];
 
 const randerModalContent = (modalContent) => {
-    modalBody.innerHTML = `<h2 class="modal-title">${modalContent.title}</h2>
+    if (modalContent.markap) {
+        modalBody.innerHTML = `
+            <h2 class="modal-title">${modalContent.title}</h2>
+            ${modalContent.markap}
+            <div class="button-row">
+                <button class="btn" data-triger-close="modal">Закрити</button>
+                <button class="closed" data-triger-close="modal">X</button>
+            </div>
+        `;
+        
+    } else {
+        modalBody.innerHTML = `<h2 class="modal-title">${modalContent.title}</h2>
                             <p class="modal-discription">
                                 ${modalContent.description}
                             </p>
+                            <div class="modal-img">
+                                <img src="${modalContent.urlImg}" alt="${modalContent.triger}">
+                            </div>
                             <div class="button-row">
-                                <button class="btn">Отправить</button>
+                                <button class="btn" data-triger-close="modal">Закрити</button>
                                 <button class="closed" data-triger-close="modal">X</button>
                             </div>`;
+    }
+    
     
     const btnClose = document.querySelectorAll('[data-triger-close="modal"]');
 
