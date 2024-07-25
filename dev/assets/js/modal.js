@@ -9,14 +9,14 @@ const modalArr = [{
     triger: 'sold',
     title: 'Нажаль всі квартири продані..(',
     description: 'Вільні квартири знаходяться в будинках, які не продані. Оберіть, будь ласка, іншу будівлю, щоб переглянути квартири своєї мрії!)',
-    urlImg: 'assets/img/application-rejected.png',
+    urlImg: 'assets/img/rejected.png',
 },
 {
     id: 1,
     triger: 'registrationSuccess',
     title: 'Регістрація',
     description: 'Ви успішно зареєструвалися.',
-    urlImg: 'assets/img/аpplication-accepted.png',
+    urlImg: 'assets/img/accepted.png',
     markap: `
         <form>
             <div class="input-row">
@@ -33,7 +33,7 @@ const modalArr = [{
     triger: 'loginSuccess',
     title: 'Успішний вхід',
     description: 'Ви успішно зареєструвалися.',
-    urlImg: 'assets/img/аpplication-accepted.png',
+    urlImg: 'assets/img/accepted.png',
 },
 ];
 
