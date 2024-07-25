@@ -26,12 +26,12 @@ header {
 
 		.menu-link {
 			text-decoration: none;
-			color: #A9A5A5;
+			color: $primary-color;
 			text-transform: capitalize;
 			transition: .3s;
 
 			&:hover {
-				color: #57d7ee;
+				color: $primary-fill;
 			}
 		}
 	}

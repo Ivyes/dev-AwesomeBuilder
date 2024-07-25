@@ -1,8 +1,8 @@
 path.build-item,
 path.build-float {
-    fill: #57d7ee;
+    fill: $primary-fill;
     fill-opacity: 0;
-    stroke: #4398a7;
+    stroke: $primary-stroke;
     stroke-opacity: 0;
     stroke-width: 4px;
     transition: .3s;
@@ -14,9 +14,9 @@ path.build-float {
     }
 
     &.sold {
-        fill: #e93111;
+        fill: $sold-fill;
         fill-opacity: 0.3;
-        stroke: #e93111;
+        stroke: $sold-fill;
         stroke-opacity: 1;
         cursor: no-drop;
     }

@@ -91,8 +91,3 @@ const trigerModal = triger.forEach(item => {
     })
 
 
-
-
-
-
-

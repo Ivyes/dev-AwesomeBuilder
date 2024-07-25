@@ -6,8 +6,9 @@
 
 body {
     background-color: #252525;
-    color: #A9A5A5;
-    font-size: 16px;
+    color: $primary-color;
+    font-size: $font-size;
+    font-family: $font-primary, $font-secondary;
 }
 
 img {

@@ -1,0 +1,70 @@
+.floor-page {
+    padding-top: 100px;
+}
+
+.floor-plan {
+    fill: none;
+}
+
+.flat {
+    &.active {
+        .flat-border {
+            fill: $flat-active-fill;
+            stroke: $flat-active-stroke;
+        }
+    }
+
+    &.action {
+        .flat-number-overlay {
+            fill: $flat-action;
+        }
+    }
+
+    &.booking {
+        .flat-number-overlay {
+            fill: $flat-booking;
+        }
+    }
+
+    &.sold {
+        .flat-number-overlay {
+            fill: $flat-sold;
+        }
+    }
+}
+
+.flat-border {
+    stroke: $flat-stroke;
+    stroke-width: 3px;
+    fill: #04ff0000;
+    cursor: pointer;
+
+    &:hover {
+        stroke: #05FF00;
+        fill: $flat-fill;
+    }
+}
+
+.flat-status-overlay {
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 2px;
+}
+
+.flat-number-overlay {
+    fill: $flat-free;
+    stroke: #000;
+    stroke-width: 2px;
+}
+
+.flat-number-text {
+    fill: #000;
+    font-weight: 600;
+}
+
+.floor-options {
+    display: flex;
+    gap: 24px;
+    text-align: center;
+    font-size: 20px;
+}
