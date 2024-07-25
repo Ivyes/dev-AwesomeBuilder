@@ -96,11 +96,3 @@ const trigerModal = triger.forEach(item => {
 
 
 
-
-
-
-
-buildSold.forEach(buildItem => {
-    buildItem.addEventListener('click', showModal)
-})
-
