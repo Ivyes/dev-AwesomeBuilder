@@ -1,5 +1,5 @@
 .floor-page {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .floor-plan {
@@ -9,8 +9,9 @@
 .flat {
     &.active {
         .flat-border {
-            fill: $flat-active-fill;
-            stroke: $flat-active-stroke;
+            fill: $primary-fill;
+            fill-opacity: 0.7;
+            stroke: $primary-stroke;
         }
     }
 
@@ -34,14 +35,15 @@
 }
 
 .flat-border {
-    stroke: $flat-stroke;
+    stroke: $primary-stroke;
     stroke-width: 3px;
     fill: #04ff0000;
     cursor: pointer;
 
     &:hover {
-        stroke: #05FF00;
-        fill: $flat-fill;
+        fill: $primary-fill;
+        fill-opacity: 0.3;
+        stroke: $primary-stroke;
     }
 }
 
@@ -62,9 +64,21 @@
     font-weight: 600;
 }
 
+.information {
+    h2 {
+        margin-bottom: 15px;
+    }
+}
+
 .floor-options {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     text-align: center;
     font-size: 20px;
+
+    .floor-option-item {
+        border-radius: 4px;
+        background-color: #5353532f;
+        padding: 10px;
+    }
 }
