@@ -114,7 +114,25 @@ const flatInfoArr = [{
     const buttonFlatClose = document.querySelector('[data-triger-close="modal"]')
     const roomInformation = document.querySelector('.flat-info')
     const rooms = document.querySelectorAll('.flat')
+    // =================
     
+ const renderRoomInformation = (array) => {
+        const render = array.map(item => {
+            return `
+                <li class="flat-info-item">Жила комната 1: ${item.roomFirst} м.кв</li>
+                <li class="flat-info-item">Жила комната 2: ${item.roomSecond} м.кв</li>
+                <li class="flat-info-item">Жила комната 3: ${item.roomThird} м.кв</li>
+                <li class="flat-info-item">Ванна кімната: ${item.bathroom} м.кв</li>
+                <li class="flat-info-item">Балкон 1: ${item.balconyFirst} м.кв</li>
+                <li class="flat-info-item">Балкон 2: ${item.balconySecond} м.кв</li>
+                <li class="flat-info-item">Кухня: ${item.kitchen} м.кв</li>
+                <li class="flat-info-item">Хол: ${item.hall} м.кв</li>
+            `})
+        
+     roomInformation.innerHTML = render
+}
+
+renderRoomInformation([flatInfoArr[0]])
 
 rooms.forEach(room => {
     room.addEventListener('click', () => {
@@ -123,24 +141,6 @@ rooms.forEach(room => {
         renderRoomInformation(roomNumber)
     })
 })
-
-    // =================
-    
- const renderRoomInformation = (array) => {
-        const render = array.map(item => {
-            return `
-                <li class="flat-info-item">Жила комната 1: ${item.roomFirst}</li>
-                <li class="flat-info-item">Жила комната 2: ${item.roomSecond}</li>
-                <li class="flat-info-item">Жила комната 3: ${item.roomThird}</li>
-                <li class="flat-info-item">Ванна кімната: ${item.bathroom}</li>
-                <li class="flat-info-item">Балкон 1: ${item.balconyFirst}</li>
-                <li class="flat-info-item">Балкон 2: ${item.balconySecond}</li>
-                <li class="flat-info-item">Кухня: ${item.kitchen}</li>
-                <li class="flat-info-item">Хол: ${item.hall}</li>
-            `})
-        
-        roomInformation.innerHTML = render
-}
 
     buttonFlatSee.addEventListener('click', () => {
         modalRoomInfo.classList.add('show')
