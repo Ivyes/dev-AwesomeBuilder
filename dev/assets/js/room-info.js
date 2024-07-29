@@ -21,7 +21,92 @@ const flatInfoArr = [{
         hall: "12.4",
         balconyFirst: "4.2",
         balconySecond: "4.7",
-    }]
+    },
+    {
+        id: 2,
+        flatNumber: '3',
+        roomFirst: "19",
+        roomSecond: "16.6",
+        roomThird: "-",
+        bathroom: "3.6",
+        kitchen: "9.1",
+        hall: "12.4",
+        balconyFirst: "4.2",
+        balconySecond: "4.7",
+    },
+    {
+        id: 3,
+        flatNumber: '4',
+        roomFirst: "19",
+        roomSecond: "16.6",
+        roomThird: "-",
+        bathroom: "3.6",
+        kitchen: "9.1",
+        hall: "12.4",
+        balconyFirst: "4.2",
+        balconySecond: "4.7",
+    },
+    {
+        id: 4,
+        flatNumber: '5',
+        roomFirst: "19",
+        roomSecond: "16.6",
+        roomThird: "-",
+        bathroom: "3.6",
+        kitchen: "9.1",
+        hall: "12.4",
+        balconyFirst: "4.2",
+        balconySecond: "4.7",
+    },
+    {
+        id: 5,
+        flatNumber: '6',
+        roomFirst: "19",
+        roomSecond: "16.6",
+        roomThird: "-",
+        bathroom: "3.6",
+        kitchen: "9.1",
+        hall: "12.4",
+        balconyFirst: "4.2",
+        balconySecond: "4.7",
+    },
+    {
+        id: 6,
+        flatNumber: '7',
+        roomFirst: "19",
+        roomSecond: "16.6",
+        roomThird: "-",
+        bathroom: "3.6",
+        kitchen: "9.1",
+        hall: "12.4",
+        balconyFirst: "4.2",
+        balconySecond: "4.7",
+    },
+    {
+        id: 7,
+        flatNumber: '8',
+        roomFirst: "19",
+        roomSecond: "16.6",
+        roomThird: "-",
+        bathroom: "3.6",
+        kitchen: "9.1",
+        hall: "12.4",
+        balconyFirst: "4.2",
+        balconySecond: "4.7",
+    },
+    {
+        id: 8,
+        flatNumber: '9',
+        roomFirst: "19",
+        roomSecond: "16.6",
+        roomThird: "-",
+        bathroom: "3.6",
+        kitchen: "9.1",
+        hall: "12.4",
+        balconyFirst: "4.2",
+        balconySecond: "4.7",
+    }
+]
 
     // =================
     const buttonFlatSee = document.querySelector('[data-triger-btn="see-flat"]')
@@ -30,10 +115,13 @@ const flatInfoArr = [{
     const roomInformation = document.querySelector('.flat-info')
     const rooms = document.querySelectorAll('.flat')
     
-console.log(rooms);
 
 rooms.forEach(room => {
-
+    room.addEventListener('click', () => {
+        const thisRoom = room.getAttribute('data-number')
+        const roomNumber = flatInfoArr.filter(item => item.flatNumber === thisRoom)
+        renderRoomInformation(roomNumber)
+    })
 })
 
     // =================
@@ -54,11 +142,6 @@ rooms.forEach(room => {
         roomInformation.innerHTML = render
 }
 
-
-
-
- // =====
-
     buttonFlatSee.addEventListener('click', () => {
         modalRoomInfo.classList.add('show')
     })
@@ -66,3 +149,5 @@ rooms.forEach(room => {
     buttonFlatClose.addEventListener('click', () => {
         modalRoomInfo.classList.remove('show')
     })
+
+    document.querySelector('.floor-page') ? installFloor() : null;
