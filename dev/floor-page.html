@@ -148,7 +148,7 @@
         <div class="information">
             <h2>Інформація про етаж</h2>
             <div class="floor-options">
-                <div class="floor-option-item">
+                <!-- <div class="floor-option-item">
                     <div>Номер дому:</div>
                     <div>2</div>
                 </div>
@@ -179,8 +179,28 @@
                 <div class="floor-option-item">
                     <div>Статус квартири:</div>
                     <div>Акція</div>
-                </div>
+                </div> -->
             </div>
+            <button class="btn" data-triger-btn="see-flat">Оглянути квартиру</button>
         </div>
+    </div>
+    <div class="modal-wrapper">
+        <div class="modal-container">
+            <div class="img-wrap">
+                <img src="" alt="">
+            </div>
+            <ul class="flat-info">
+                <li class="flat-info-item">Жила комната 1:</li>
+                <li class="flat-info-item">Жила комната 2:</li>
+                <li class="flat-info-item">Жила комната 3:</li>
+                <li class="flat-info-item">Ванна кімната:</li>
+                <li class="flat-info-item">Балкон 1:</li>
+                <li class="flat-info-item">Балкон 2:</li>
+                <li class="flat-info-item">Кухня:</li>
+                <li class="flat-info-item">Хол:</li>
+            </ul>
+            <button class="closed" data-triger-close="modal">X</button>
+        </div>
+    </div>
 </main>
 @@include('templates/footer.html')

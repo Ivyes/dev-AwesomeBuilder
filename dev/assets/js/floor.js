@@ -1,4 +1,3 @@
-// const firstFlat = document.querySelector('.flat').classList.add('active')
 const flatArr = [{
         id: 0,
         house: '2',
@@ -112,7 +111,7 @@ const flatArr = [{
 const installFloor = () => {
     const flats = document.querySelectorAll('.flat')
     const flatInfo = document.querySelector('.floor-options')
-    const initialValue = [flatArr[0]]
+    const initialValue = [flatArr[0]]    
 
     const removeActiveClass = () => flats.forEach(item => item.classList.remove('active'))
 
@@ -193,8 +192,8 @@ const installFloor = () => {
 
     })
 
-    setInitialActiveClass()
-    
+    setInitialActiveClass()   
 }
+
 
 document.querySelector('.floor-page') ? installFloor() : null;
