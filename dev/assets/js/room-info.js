@@ -9,6 +9,7 @@ const flatInfoArr = [{
         hall: "14.8",
         balconyFirst: "4.2",
         balconySecond: "-",
+        urlImg: "assets/img/flat-1.png",
     },
     {
         id: 1,
@@ -21,6 +22,7 @@ const flatInfoArr = [{
         hall: "12.4",
         balconyFirst: "4.2",
         balconySecond: "4.7",
+        urlImg: "assets/img/flat-2.png",
     },
     {
         id: 2,
@@ -33,6 +35,7 @@ const flatInfoArr = [{
         hall: "12.4",
         balconyFirst: "4.2",
         balconySecond: "4.7",
+        urlImg: "assets/img/flat-3.png",
     },
     {
         id: 3,
@@ -45,6 +48,7 @@ const flatInfoArr = [{
         hall: "12.4",
         balconyFirst: "4.2",
         balconySecond: "4.7",
+        urlImg: "assets/img/flat-4.png",
     },
     {
         id: 4,
@@ -57,6 +61,7 @@ const flatInfoArr = [{
         hall: "12.4",
         balconyFirst: "4.2",
         balconySecond: "4.7",
+        urlImg: "assets/img/flat-5.png",
     },
     {
         id: 5,
@@ -69,6 +74,7 @@ const flatInfoArr = [{
         hall: "12.4",
         balconyFirst: "4.2",
         balconySecond: "4.7",
+        urlImg: "assets/img/flat-6.png",
     },
     {
         id: 6,
@@ -81,6 +87,7 @@ const flatInfoArr = [{
         hall: "12.4",
         balconyFirst: "4.2",
         balconySecond: "4.7",
+        urlImg: "assets/img/flat-7.png",
     },
     {
         id: 7,
@@ -93,6 +100,7 @@ const flatInfoArr = [{
         hall: "12.4",
         balconyFirst: "4.2",
         balconySecond: "4.7",
+        urlImg: "assets/img/flat-8.png",
     },
     {
         id: 8,
@@ -105,31 +113,47 @@ const flatInfoArr = [{
         hall: "12.4",
         balconyFirst: "4.2",
         balconySecond: "4.7",
+        urlImg: "assets/img/flat-9.png",
     }
 ]
+
+const infoRoomPage = () => {
 
     // =================
     const buttonFlatSee = document.querySelector('[data-triger-btn="see-flat"]')
     const modalRoomInfo = document.querySelector('.floor-page .modal-wrapper')
-    const buttonFlatClose = document.querySelector('[data-triger-close="modal"]')
-    const roomInformation = document.querySelector('.flat-info')
+    const roomInformation = document.querySelector('.floor-page .modal-container')
     const rooms = document.querySelectorAll('.flat')
     // =================
     
  const renderRoomInformation = (array) => {
         const render = array.map(item => {
             return `
-                <li class="flat-info-item">Жила комната 1: ${item.roomFirst} м.кв</li>
-                <li class="flat-info-item">Жила комната 2: ${item.roomSecond} м.кв</li>
-                <li class="flat-info-item">Жила комната 3: ${item.roomThird} м.кв</li>
-                <li class="flat-info-item">Ванна кімната: ${item.bathroom} м.кв</li>
-                <li class="flat-info-item">Балкон 1: ${item.balconyFirst} м.кв</li>
-                <li class="flat-info-item">Балкон 2: ${item.balconySecond} м.кв</li>
-                <li class="flat-info-item">Кухня: ${item.kitchen} м.кв</li>
-                <li class="flat-info-item">Хол: ${item.hall} м.кв</li>
+            <div class="img-wrap">
+                <img src="${item.urlImg}" alt="flat ${item.flatNumber}">
+            </div>
+            <ul class="flat-info">
+                <li class="flat-info-item"><strong>Жила комната 1:</strong> ${item.roomFirst} м.кв</li>
+                <li class="flat-info-item"><strong>Жила комната 2:</strong> ${item.roomSecond} м.кв</li>
+                <li class="flat-info-item"><strong>Жила комната 3:</strong> ${item.roomThird} м.кв</li>
+                <li class="flat-info-item"><strong>Ванна кімната:</strong> ${item.bathroom} м.кв</li>
+                <li class="flat-info-item"><strong>Балкон 1:</strong> ${item.balconyFirst} м.кв</li>
+                <li class="flat-info-item"><strong>Балкон 2:</strong> ${item.balconySecond} м.кв</li>
+                <li class="flat-info-item"><strong>Кухня:</strong> ${item.kitchen} м.кв</li>
+                <li class="flat-info-item"><strong>Хол:</strong> ${item.hall} м.кв</li>
+            </ul>
+            <button class="closed" data-triger-close="modal">X</button>
             `})
         
      roomInformation.innerHTML = render
+        
+        const buttonFlatClose = document.querySelectorAll('[data-triger-close="modal"]')
+        
+     buttonFlatClose.forEach(itemClose => {
+         itemClose.addEventListener('click', () => {
+                modalRoomInfo.classList.remove('show')
+            })
+        })
 }
 
 renderRoomInformation([flatInfoArr[0]])
@@ -141,13 +165,11 @@ rooms.forEach(room => {
         renderRoomInformation(roomNumber)
     })
 })
-
+  
     buttonFlatSee.addEventListener('click', () => {
         modalRoomInfo.classList.add('show')
     })
 
-    buttonFlatClose.addEventListener('click', () => {
-        modalRoomInfo.classList.remove('show')
-    })
-
-    document.querySelector('.floor-page') ? installFloor() : null;
+}
+    
+document.querySelector('.floor-page') ? infoRoomPage() : null;

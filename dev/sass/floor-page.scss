@@ -1,5 +1,23 @@
 .floor-page {
     padding-top: 50px;
+
+    .modal-wrapper {
+        .modal-container {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .flat-info {
+            list-style: none;
+
+            .flat-info-item {
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
 }
 
 .floor-plan {
@@ -65,8 +83,13 @@
 }
 
 .information {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+
     h2 {
         margin-bottom: 15px;
+        width: 100%;
     }
 }
 
