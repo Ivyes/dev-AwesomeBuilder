@@ -1,31 +1,66 @@
 @@include('templates/head.html')
 @@include('templates/header.html')
-<main>
+<main class="build-page">
     <section>
         <div class="container">
             <svg viewBox="0 0 2422 1188">
                 <image xlink:href="assets/img/build-item.png" />
                 <a href="floor-page.html">
-                    <path class="build-float"
+                    <path class="build-float" data-floor-number="5" data-triger-modal=""
                         d="M1180.5 442V238.5H1907V321L1855.5 372H1900V414H1917V419L1907 425.5V442H1180.5Z" />
                 </a>
                 <a href="floor-page.html">
-                    <path class="build-float"
+                    <path class="build-float" data-floor-number="4" data-triger-modal=""
                         d="M794.5 390L254.5 394H209.5V463.5H254.5V523.5H209.5V554.5H190V558.5L198.5 561.5V581.5L796 585.5L819.5 601H1180V585.5L1907.5 579V560H1900V511H1856V498.5L1907.5 460V442H1180V424.5H819.5L794.5 390Z" />
                 </a>
                 <a href="floor-page.html">
-                    <path class="build-float"
+                    <path class="build-float" data-floor-number="3" data-triger-modal=""
                         d="M199 597.5V582L796 586L819.5 600.5H1180V586L1907.5 579V601L1855.5 628V650.5H1900.5V695.5H1917V699.5L1907.5 703.5V721H791.5H199V701H188.5V694H211V649L267 643.5V625L199 597.5Z" />
                 </a>
                 <a href="floor-page.html">
-                    <path class="build-float"
+                    <path class="build-float" data-floor-number="2" data-triger-modal=""
                         d="M198.5 739.5V721L1907.5 721.5V740L1855.5 757V789H1900.5V836H1917.5V839.5L1907.5 842V859H198.5L189.5 840V835H210.5V789L264.5 783.5V756L198.5 739.5Z" />
                 </a>
                 <a href="floor-page.html">
-                    <path class="build-float" d="M198 1036.5V859L1906 859.5V1036.5H198Z" />
+                    <path class="build-float" data-floor-number="1" data-triger-modal=""
+                        d="M198 1036.5V859L1906 859.5V1036.5H198Z" />
                 </a>
             </svg>
+            <div class="information">
+                <h2>Інформація</h2>
+                <div class="floor-options">
+                    <div class="floor-option-item">
+                        <div>Номер дому:</div>
+                        <div>2</div>
+                    </div>
+                    <div class="floor-option-item">
+                        <div>Поверх:</div>
+                        <div>1</div>
+                    </div>
+                    <div class="floor-option-item">
+                        <div>Номери квартир:</div>
+                        <div>1 - 9</div>
+                    </div>
+                    <div class="floor-option-item">
+                        <div>Кількість квартир</div>
+                        <div>9</div>
+                    </div>
+                    <div class="floor-option-item">
+                        <div>Вільних квартир:</div>
+                        <div>2</div>
+                    </div>
+                    <div class="floor-option-item">
+                        <div>Продано:</div>
+                        <div>5</div>
+                    </div>
+                    <div class="floor-option-item">
+                        <div>Бронь:</div>
+                        <div>1</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>
+@@include('templates/modal.html')
 @@include('templates/footer.html')

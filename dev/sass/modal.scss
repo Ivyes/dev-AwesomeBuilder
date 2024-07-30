@@ -1,14 +1,11 @@
-.modal-wrapper {
+.modal-wrapper,
+.modal-room {
     position: fixed;
     inset: 0;
     display: none;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(5px);
-
-    &.show {
-        display: flex;
-    }
 
     .modal-container {
         width: 600px;
@@ -24,14 +21,18 @@
         position: relative;
     }
 
-    .modal-title {
-        text-transform: uppercase;
-    }
-
     .closed {
         position: absolute;
         top: 10px;
         right: 10px;
+    }
+
+    &.show {
+        display: flex;
+    }
+
+    .modal-title {
+        text-transform: uppercase;
     }
 
     .modal-img {
@@ -65,4 +66,11 @@
         }
     }
 
+}
+
+.modal-room {
+    .modal-container {
+        flex-direction: row;
+        align-items: center;
+    }
 }

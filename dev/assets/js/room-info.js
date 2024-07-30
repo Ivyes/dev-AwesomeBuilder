@@ -121,8 +121,8 @@ const infoRoomPage = () => {
 
     // =================
     const buttonFlatSee = document.querySelector('[data-triger-btn="see-flat"]')
-    const modalRoomInfo = document.querySelector('.floor-page .modal-wrapper')
-    const roomInformation = document.querySelector('.floor-page .modal-container')
+    const modalRoomInfo = document.querySelector('.modal-room')
+    const roomInformation = document.querySelector('.modal-room .modal-container')
     const rooms = document.querySelectorAll('.flat')
     // =================
     
